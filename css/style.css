@@ -347,6 +347,24 @@ footer{
     background-color:black;
 }
 
+ /* Subir a tela*/
+ .subir {
+     height: 50px;
+     width: 50px;
+     position: fixed;
+     right: 5px;
+     bottom: 20px;
+     background-image: url(../Icons/subir.png);
+     background-size: cover;
+     z-index: 999;
+     cursor: pointer;
+     border-radius: 25px;
+ }
+
+ .subir:hover{
+    border: 1px solid  #E5E059;
+ }
+
 /*----------------------------Responsividade-----------------------------*/
 
 @media (max-width:600px) {
