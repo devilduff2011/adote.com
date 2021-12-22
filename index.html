@@ -3,21 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, user-scalable=0">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
-     <!--Script do menu responsivo-->
-     <script type="text/javascript">
-        window.onload = function(){
-            document.querySelector(".menu_mobile").addEventListener("click", function(){
-               if(document.querySelector("nav ul").style.display == 'flex') {
-                   document.querySelector("nav ul").style.display = 'none';
-               } else{
-                document.querySelector("nav ul").style.display = 'flex';
-               }
-            });
-        };
-    </script>
+
     <title>Adote</title>
 </head>
 <body>
@@ -51,10 +40,8 @@
             <div class="right">
                 <h1>SALVE <br> UM <br> AMIGO</h1>
                 <p>ADOTE  OU DOE AGORA!</p>
-                <div class="buttons">
-                    <a href="" class="adotar grow">Adotar</a>
-                    <a href="" class="doar grow">Doar</a>
-                </div>
+                <button class="adotar grow"><a href="" >Adotar</a>
+                <button class="doar grow"><a href="" >Doar</a></button>
             </div>
             
         </header>

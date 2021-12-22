@@ -4,6 +4,7 @@ body{
     display: grid;
 }
 
+/*   Menu   */
 nav{
     height: 90px;
     border: 3px solid #972143;
@@ -51,6 +52,9 @@ nav ul a:hover:not(.logo){
     color: white;
 }
 
+/*   Fim Menu   */
+
+/* Banner principal */
 header{
     background-image: url("../imagens/cao.jpeg");
     background-size: cover;
@@ -58,7 +62,6 @@ header{
     background-repeat: no-repeat;
     height: 600px;
     width: 100%;
-    overflow: hidden;
 }
 
 header{
@@ -90,25 +93,23 @@ header{
     text-shadow: 1px 0px 3px red;
 }
 
+
 .adotar{
     text-decoration: none;
     padding: 20px;
     border: 2px solid black;
-    padding-left: 30px;
-    padding-right: 30px;
-    color: black;
+    margin: auto;
     border-radius: 3px;
     background-color: #555555;
     -webkit-transition-duration: 0.4s; /* Safari */
     transition-duration: 0.4s;
+    margin-right: 30px;
+    margin-left: 100px;
 }
 
 .doar{
-    text-decoration: none;
     padding: 20px;
-    padding-left: 30px;
-    padding-right: 30px;
-    color: white; 
+    margin: auto; 
     border-radius: 3px;  
     background-color: #f44336; 
     border: 2px solid black;
@@ -116,14 +117,23 @@ header{
     transition-duration: 0.4s;
 }
 
+.adotar a{ 
+    color: white;
+}
+
+.doar a{
+    color: black;
+}
+
+.doar a, .adotar a{
+    text-decoration: none;
+}
+
 .buttons a{
     font-size: 23px;
 }
 
-.buttons{
-    display: flex;
-    justify-content: space-evenly;
-}
+/*  Fim Banner principal */
 
 main{
     margin: 50px;
@@ -222,6 +232,7 @@ main{
     align-content: center;
 }
 
+/* Rodapé */
 
 footer{
     padding: 50px;
@@ -304,7 +315,7 @@ footer{
 .newsletter div a{
     background-color: #555555;
     text-decoration: none;
-    padding: 9px 15px;
+    padding: 9px 13px;
     font-weight: 500;
     color: white;
     font-size: 18px;
@@ -319,18 +330,19 @@ footer{
 
 .newsletter div input{
     height: 33px;
-    width: 250px;
+    width: 33vw;
+    max-width: 200px;
     border-top-left-radius: 3px;
     border-bottom-left-radius: 3px;
     border: 1px solid white;
     outline: none;
 }
 
-
-
 .contacts ul a{
     align-items:flex-start;
 }
+
+/* Fim Rodapé */
 
 /* Menu Responsivo */
 .menu_mobile{
@@ -368,12 +380,58 @@ footer{
 /*----------------------------Responsividade-----------------------------*/
 
 @media (max-width:600px) {
-    header{
-        height: auto;
+
+    .right{
+        padding: 0px;
     }
 
     header .container{
         flex-direction: row;
+    }
+
+    header{  
+        background-position: left;
+    }
+
+    footer{
+        flex-direction: column;
+    }
+
+    .cards {
+        margin: 0px;
+        padding: 0px;
+    }
+    .subir{
+        width: 0px;
+    }
+
+    .main_text{
+        max-width: 320px;
+    }
+    .newsletter div input::placeholder{
+        font-size: 4vw;
+    }
+}
+
+@media(max-width: 845px) and (min-width: 601px)  {
+    .newsletter div input{
+        width: 18vw;
+        max-width: 200px;
+    }
+
+    .newsletter div a{
+        padding: 9px;
+    }
+
+    .newsletter div input::placeholder{
+        font-size: 2vw;
+    }
+}
+
+@media (max-width:1034px){
+    nav{
+        height: 50px;
+        width: 100%;
     }
 
     nav ul{
@@ -383,13 +441,23 @@ footer{
         left: 0;
         width: 100%;
         background-color: white;
+        margin-top: -35px;
+
     }
 
     .menu_mobile{
         display: flex;
         flex-direction: column;
         justify-content: space-around;
+        margin-left: 20px;
+        margin-top: 8px;
+
     }
- 
- /* Fim Menu Responsivo */
+   
+}
+
+@media(max-width: 1033px) and (min-width: 601px){
+    header{  
+        background-position: right;
+    }
 }
